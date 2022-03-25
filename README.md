@@ -290,13 +290,14 @@ Here's a description of the way the project is laid out:
   - **serialization.py** – contains code that converts Reminder instances into
     simple Python lists and dicts, ready to be used in a JSON response from a
     Flask route
-- **tests/** – contains the automated test code*
+- **tests/** – contains the automated test code<sup>1</sup>
   - **conftest.py** – contains test configuration, including pytest fixtures to 
     automate setting up common test requirements
   - **test_models.py** – contains tests for the models in reminders/models.py
   - **test_routes.py** – contains tests for the API endpoints
 
-*pytest will automatically discover tests in this folder, so long as:
+<sup>1</sup> pytest will automatically discover all test functions in the tests/
+directory, so long as:
 - They are in a file with a name that starts with `test_` 
 - The function name also starts with `test_`
 
