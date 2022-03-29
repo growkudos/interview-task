@@ -104,7 +104,7 @@ additional packages that are needed.
 ### Run the server
 
 Let's run the server and manually test its API endpoints. To run the server,
-run the following commands on Linux or macOS:
+run the following command on Linux or macOS:
 
 ```sh
 FLASK_APP=reminders flask run
