@@ -21,10 +21,16 @@ have the option to 'Add Python 3.x to PATH' – you should make sure this is
 enabled.
 
 You can check if Python is installed properly by running the following command
-on Linux and macOS (in a terminal), or on Windows in a Command Prompt window:
+on Linux and macOS (in a terminal):
 
 ```sh
 python3 --version
+```
+
+Or on Windows (CMD/Command Prompt or PowerShell):
+
+```cmd
+python --version
 ```
 
 You should see the installed version of Python printed in the terminal. If you
@@ -39,10 +45,16 @@ without affecting your system Python installation. Make sure your working
 directory is the top-level directory of the interview task codebase you
 downloaded (the same directory as this README.md file).
 
-First, create the virtual environment by running the following command:
+First, create the virtual environment by running the following command on Linux or macOS:
 
 ```sh
 python3 -m venv reminders-env
+```
+
+Or on Windows (CMD/Command Prompt or PowerShell):
+
+```cmd
+python -m venv reminders-env
 ```
 
 This tells Python to create a new virtual environment in the 'reminders-env'
@@ -50,13 +62,21 @@ directory. To use the virtual environment, you need to **activate** it by
 running the following command.
 
 On Linux and macOS:
+
 ```sh
 source reminders-env/bin/activate
 ```
 
-On Windows Command Prompt:
-```
+Or on Windows CMD/Command Prompt:
+
+```cmd
 reminders-env\Scripts\activate.bat
+```
+
+Or on Windows PowerShell:
+
+```ps
+reminders-env\Scripts\Activate.ps1
 ```
 
 You'll see the prompt change to reflect that you've activated the virtual
@@ -71,7 +91,7 @@ virtual environment active.**
 ### Install the required third-party packages
 
 We can use `pip` to automatically download and install all the needed
-requirements for this project. Run the following command:
+requirements for this project. Run the following command (on Linux, macOS, Windows CMD/Command Prompt, and Windows PowerShell):
 
 ```sh
 pip install -r requirements.txt
@@ -83,10 +103,24 @@ additional packages that are needed.
 ### Run the server
 
 Let's run the server and manually test its API endpoints. To run the server,
-run the following command:
+run the following commands on Linux or macOS:
 
 ```sh
 FLASK_APP=reminders flask run
+```
+
+Or on Windows CMD/Command Prompt, run the following two commands:
+
+```cmd
+set FLASK_APP=reminders
+flask run
+```
+
+Or on Windows PowerShell, run the following two commands:
+
+```ps1
+$env:FLASK_APP='reminders'
+flask run
 ```
 
 This tells [Flask][flask] to discover our app inside the `reminders` package and
@@ -109,7 +143,7 @@ environment**. You can then use a package called [HTTPie][httpie] that was
 installed by `pip` to excercise the app's API. Here's an example that shows how
 to list all current reminders, then create a new one, then check the list again.
 Lines typed are prefixed with `$`, and the results of each command are given
-verbatim:
+verbatim. All commands are the same for Linux, macOS, Windows CMD/Command Prompt, and Windows PowerShell
 
 <details>
 <summary>1. Listing current reminders</summary>
@@ -216,10 +250,16 @@ and report feedback. Pytest will automatically discover and run these tests, so
 long as your working directory is the same folder as this README.md file.
 
 In a terminal **with the virtual environment activated**, run the following
-command:
+command on Linux or macOS:
 
 ```sh
 python3 -m pytest
+```
+
+Or on Windows CMD/Command Prompt, or Windows PowerShell:
+
+```cmd
+python -m pytest
 ```
 
 You'll see pytest report the test results:
@@ -282,14 +322,14 @@ Some tips to get you started:
 ### Submitting your work
 
 Please submit your work by creating a zip archive of the entire repository,
-except for the `env` and `__pycache__` folders (if present). 
+except for the `reminders-env` and `__pycache__` folders (if present). 
 
 If you're using macOS or Linux, you can use the following command from the
 directory containing the interview-task repository (one level above this
 README.md file) to automatically exclude unnecessary files:
 
 ```
-zip -r completed-interview-task.zip interview-task -x "*/env/*" -x "*/__pycache__/*" -x "*/.*/*"
+zip -r completed-interview-task.zip interview-task -x "*/reminders-env/*" -x "*/__pycache__/*" -x "*/.*/*"
 ```
 
 (This command assumes that the directory containing the code is called
