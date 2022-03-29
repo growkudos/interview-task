@@ -1,7 +1,7 @@
 # Kudos Software Engineer Interview Task
 
 This repository contains a simple web server, written in Python. When running,
-the server exposes a simple REST-style API. You'll be making a small new feature
+the server exposes a simple REST-style API. You'll be adding a small new feature
 to this server. Don't worry if you haven't used Python before, or written web
 server code. The goal of the exercise is demonstrate your ability to read and
 understand a codebase that you're new to, before extending what's already there.
