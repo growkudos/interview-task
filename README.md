@@ -272,8 +272,34 @@ Some tips to get you started:
   to!); this exercise isn't really about Python, but more the way in which you
   approach making a change to an existing codebase
 - You should consider how you and others will test your changes.
+- Don't worry if there's aspects you struggle with or are uncertain about. The
+  goal of this task is to give us insight into the way you think and solve
+  problems, so don't worry about submitting the code, even if you feel it's
+  incomplete or there's aspects you could improve upon.
 
 [request-args]: https://flask.palletsprojects.com/en/2.0.x/api/#flask.Request.args
+
+### Submitting your work
+
+Please submit your work by creating a zip archive of the entire repository,
+except for the `env` and `__pycache__` folders (if present). 
+
+If you're using macOS or Linux, you can use the following command from the
+directory containing the interview-task repository (one level above this
+README.md file) to automatically exclude unnecessary files:
+
+```
+zip -r completed-interview-task.zip interview-task -x "*/env/*" -x "*/__pycache__/*" -x "*/.*/*"
+```
+
+(This command assumes that the directory containing the code is called
+`interview-task` – if not, you'll need to adjust the above command.)
+
+This will help to keep the size of the zip file down. Email your completed task
+to [engineering@growkudos.com][sub-email] with the subject 'Engineering
+interview code submission for \<YOUR NAME HERE\>'.
+
+[sub-email]: mailto:engineering@growkudos.com?subject=Engineering%20interview%20code%20submission%20for%20YOUR%20NAME%20HERE
 
 
 ## Project Structure
