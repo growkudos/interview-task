@@ -15,10 +15,11 @@ using Git (if you're comfortable using it).
 ### Installing Python
 
 You'll need to have a recent version of Python 3 installed. This code was
-written on Python 3.9. You can download Python for Windows, Linux, and macOS on
-[the official Python downloads page][dl]. During Python setup on Windows, you'll
-have the option to 'Add Python 3.x to PATH' – you should make sure this is
-enabled.
+written for Python 3.9 or newer. You can download Python for Windows, Linux, 
+and macOS on [the official Python downloads page][dl]. During Python 
+setup on Windows, you'll have the option to 'Add Python 3.x to PATH' – you 
+should make sure this is enabled. After installing Python on Windows, log
+out or restart your computer to make sure PATH changes take effect.
 
 You can check if Python is installed properly by running the following command
 on Linux and macOS (in a terminal):
